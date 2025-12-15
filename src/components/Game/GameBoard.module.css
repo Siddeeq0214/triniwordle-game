@@ -1,0 +1,24 @@
+.gameBoard {
+    min-height: 100vh;
+    background-color: #121213;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .gameContainer {
+        padding: 10px 8px;
+    }
+}

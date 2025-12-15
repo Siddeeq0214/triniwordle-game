@@ -1,0 +1,230 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+  padding: 16px;
+}
+
+.modal {
+  background-color: #121213;
+  border: 1px solid #3a3a3c;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 1.75rem;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message {
+  font-size: 1.15rem;
+  margin: 0 0 28px 0;
+  color: #d7dadc;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  background-color: #538d4e;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.button:hover {
+  background-color: #6aaa64;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.buttonSecondary {
+  background-color: #3a3a3c;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.buttonSecondary:hover {
+  background-color: #565758;
+  transform: translateY(-1px);
+}
+
+.buttonSecondary:active {
+  transform: translateY(0);
+}
+
+.helpContent {
+  color: #d7dadc;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.instruction {
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+}
+
+.instruction strong {
+  color: #ffffff;
+}
+
+.divider {
+  height: 1px;
+  background-color: #3a3a3c;
+  margin: 24px 0;
+}
+
+.examples {
+  margin-top: 24px;
+}
+
+.examplesTitle {
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.example {
+  margin-bottom: 20px;
+}
+
+.exampleRow {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.exampleTile {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ffffff;
+  background-color: #121213;
+}
+
+.exampleTile.correct {
+  background-color: #538d4e;
+  border-color: #538d4e;
+}
+
+.exampleTile.present {
+  background-color: #b59f3b;
+  border-color: #b59f3b;
+}
+
+.exampleTile.absent {
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+.exampleDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d7dadc;
+}
+
+.exampleDescription strong {
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .modal {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .button,
+  .buttonSecondary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    min-width: 100px;
+  }
+
+  .exampleTile {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .instruction {
+    font-size: 0.9rem;
+  }
+
+  .exampleDescription {
+    font-size: 0.85rem;
+  }
+}
