@@ -1,13 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Header } from "../Header";
 import { Grid } from "../Grid";
 import { Keyboard } from "../Keyboard";
 import { Message } from "../Message";
+import {HelpModal} from "../Modal";
 import { useWordle } from "../../hooks/useWordle";
 import { useKeyboard } from "../../hooks/useKeyboard";
 import styles from "./GameBoard.module.css";
 
 export const GameBoard: FC = () => {
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
   const {
     gameState,
     message,
@@ -15,7 +17,6 @@ export const GameBoard: FC = () => {
     submitGuess,
     updateCurrentGuess,
     deleteLastLetter,
-    resetGame,
     letterStates,
   } = useWordle();
 
@@ -38,7 +39,8 @@ export const GameBoard: FC = () => {
 
   return (
     <div className={styles.gameBoard}>
-      <Header onReset={resetGame} />
+      <Header onHelp={() => setIsHelpOpen(true)} />
+      <HelpModal isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
       <Message message={message} />
       <div className={styles.gameContainer}>
         <Grid

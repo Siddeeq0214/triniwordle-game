@@ -1,17 +1,21 @@
 .header {
   width: 100%;
-  border-bottom: 1px solid #3a3a3c;
   padding: 16px 0;
   margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.712);
+  backdrop-filter: blur(10px);
+  border-bottom: 4px solid var(--color-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
 }
 
 .titleGroup {
@@ -23,35 +27,50 @@
 
 .title {
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: 0.2em;
-  color: #ffffff;
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* animation: carnival 5s ease infinite; */
+  /* background: linear-gradient(
+    90deg,
+    var(--color-red),
+    var(--color-white),
+    var(--color-black),
+    var(--color-white),
+    var(--color-red)
+  ); */
+  /* background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .subtitle {
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--color-primary);
   font-weight: bold;
   margin: 0;
   text-align: center;
 }
 
 .iconButton {
-  background: none;
-  border: none;
-  color: #ffffff;
+  background: var(--color-primary);
+  border: 3px solid var(--color-black);
+  color: var(--color-black);
   cursor: pointer;
-  padding: 8px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .iconButton:hover {
-  background-color: #3a3a3c;
+  background: var(--color-white);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .iconButton:active {

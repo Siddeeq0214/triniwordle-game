@@ -7,63 +7,75 @@
 
 .keyboardRow {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   justify-content: center;
   margin-bottom: 8px;
 }
 
 .key {
-  min-width: 43px;
+  min-width: 40px;
   height: 58px;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #818384;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #000000;
+  background-color: #ffffff;
   cursor: pointer;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .key.wide {
   min-width: 65px;
   font-size: 0.75rem;
+  padding: 0 12px;
 }
 
 .key:hover {
-  background-color: #9a9a9c;
+  background-color: #fef08a;
+  transform: scale(1.05);
 }
 
 .key:active {
   transform: scale(0.95);
+  background-color: #e0e0e0;
 }
 
 .key.correct {
-  background-color: #538d4e;
+  background: linear-gradient(135deg, var(--color-correct), #16a34a);
+  color: #ffffff;
+  border-color: var(--color-correct);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5);
 }
 
 .key.correct:hover {
-  background-color: #6aaa64;
+  background: linear-gradient(135deg, #16a34a, var(--color-correct));
 }
 
 .key.present {
-  background-color: #b59f3b;
+  background: linear-gradient(135deg, var(--color-present), #f59e0b);
+  color: #000000;
+  border-color: var(--color-present);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.5);
 }
 
 .key.present:hover {
-  background-color: #c9b458;
+  background: linear-gradient(135deg, #f59e0b, var(--color-present));
 }
 
 .key.absent {
-  background-color: #3a3a3c;
+  background: linear-gradient(135deg, #374151, #1f2937);
+  color: #9ca3af;
+  border-color: #1f2937;
 }
 
 .key.absent:hover {
-  background-color: #4a4a4c;
+  background: linear-gradient(135deg, #4b5563, #374151);
 }
 
 @media (max-width: 480px) {
@@ -79,6 +91,6 @@
   }
 
   .keyboardRow {
-    gap: 4px;
+    gap: 3px;
   }
 }

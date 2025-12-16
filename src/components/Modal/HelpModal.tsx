@@ -15,13 +15,13 @@ export const HelpModal: FC<HelpModalProps> = ({ isOpen, onClose }) => {
         <h2 className={styles.title}>How to Play Trini Wordle</h2>
         <div className={styles.helpContent}>
           <p className={styles.instruction}>
-            Guess the <strong>TRINI WORD</strong> in 6 tries.
+            Guess de <strong>TRINI WORD</strong> in 6 tries nah!
           </p>
           <p className={styles.instruction}>
-            Each guess must be a valid 5-letter word. Press the enter button to submit.
+            Each guess must be a valid 5-letter word. Press de enter button to submit yuh guess.
           </p>
           <p className={styles.instruction}>
-            After each guess, the color of the tiles will change to show how close your guess was to the word.
+            After each guess, the color of the tiles will change to show how close you were to the word.
           </p>
           
           <div className={styles.divider}></div>
@@ -64,7 +64,7 @@ export const HelpModal: FC<HelpModalProps> = ({ isOpen, onClose }) => {
                 <span className={styles.exampleTile}>D</span>
               </div>
               <p className={styles.exampleDescription}>
-                The letter <strong>A</strong> is not in the word in any spot.
+                The letter <strong>A</strong> is not in the word at all.
               </p>
             </div>
           </div>
@@ -72,12 +72,12 @@ export const HelpModal: FC<HelpModalProps> = ({ isOpen, onClose }) => {
           <div className={styles.divider}></div>
           
           <p className={styles.instruction}>
-            <strong>Note:</strong> Words include Trinidad and Tobago Creole expressions and slang! 🇹🇹
+            <strong>Note:</strong> The words include real Trini expressions and slang - so come play ah lil game nah!
           </p>
         </div>
         
         <button className={styles.button} onClick={onClose}>
-          Let's go!
+          Leh we play! 🎉
         </button>
       </div>
     </div>

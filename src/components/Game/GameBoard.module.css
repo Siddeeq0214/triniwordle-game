@@ -1,8 +1,64 @@
 .gameBoard {
     min-height: 100vh;
-    background-color: #121213;
+    background: linear-gradient(
+        135deg,
+        rgba(206, 17, 38, 0.12) 0%,        /* Faint red - Trinidad flag red */
+        rgba(206, 17, 38, 0.12) 45%,       /* Faint red continues */
+        rgba(0, 0, 0, 0.25) 47%,           /* Faint black stripe starts */
+        rgba(0, 0, 0, 0.25) 53%,           /* Faint black stripe ends */
+        rgba(206, 17, 38, 0.12) 55%,       /* Faint red continues */
+        rgba(206, 17, 38, 0.12) 100%      /* Faint red to bottom */
+    );
+    position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+/* White borders on the diagonal black stripe */
+.gameBoard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 45%,
+            rgba(255, 255, 255, 0.2) 45.5%,    /* Faint white border top */
+            rgba(255, 255, 255, 0.2) 46.5%,
+            transparent 46.5%,
+            transparent 52.5%,
+            rgba(255, 255, 255, 0.2) 52.5%,    /* Faint white border bottom */
+            rgba(255, 255, 255, 0.2) 53.5%,
+            transparent 53.5%,
+            transparent 100%
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Optional: Subtle pattern overlay for texture */
+.gameBoard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.02) 2px,
+            rgba(255, 255, 255, 0.02) 4px
+        );
+    pointer-events: none;
+    z-index: 0;
 }
 
 .gameContainer {
@@ -15,6 +71,8 @@
     max-width: 500px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 480px) {

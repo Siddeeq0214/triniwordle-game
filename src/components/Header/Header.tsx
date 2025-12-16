@@ -1,13 +1,12 @@
 import React, { FC } from "react";
-import { RotateCcw, HelpCircle } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 import styles from "./Header.module.css";
 
 interface HeaderProps {
-  onReset: () => void;
   onHelp?: () => void;
 }
 
-export const Header: FC<HeaderProps> = ({ onReset, onHelp }) => {
+export const Header: FC<HeaderProps> = ({ onHelp }) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -24,14 +23,15 @@ export const Header: FC<HeaderProps> = ({ onReset, onHelp }) => {
           <p className={styles.subtitle}>Come play ah lil game nah! 🎭</p>
         </div>
 
-        <button
+        {/* <button
           className={styles.iconButton}
           onClick={onReset}
           aria-label="New Game"
         >
           {" "}
           <RotateCcw size={24} />
-        </button>
+        </button> */}
+        <div style={{width: 40}}></div>
       </div>
     </header>
   );

@@ -1,13 +1,15 @@
 .grid {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 10px 0;
 }
 
 .row {
     display: flex;
-    gap: 5px;
+    flex-direction: row;
+    gap: 12px;
+    margin: 10px 0;
     justify-content: center;
 }
 
