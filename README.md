@@ -1,46 +1,89 @@
-# Getting Started with Create React App
+# A TRINI TAKE OF THE ORIGINAL WORDLE GAME
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Trinidadian-themed version of the popular word guessing game Wordle, featuring authentic Trini expressions, slang, and a vibrant Caribbean design!
 
-## Available Scripts
+## 🎮 About
 
-In the project directory, you can run:
+**TRINI WORDLE** is a word-guessing game where players try to guess a 5-letter Trinidadian word in 6 attempts. The game features:
 
-### `npm start`
+- **Authentic Trini Words**: Guess words from Trinidad and Tobago Creole expressions and slang
+- **Beautiful Design**: Vibrant Caribbean-themed UI with Trinidad flag colors
+- **Helpful Feedback**: Color-coded tiles show how close your guess is to the word
+- **Full Word Dictionary**: Accepts all valid 5-letter English words as guesses
+- **Trini Slang**: Help modal and messages written in authentic Trini dialect
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 🎯 **6 Guesses**: Try to guess the word in 6 attempts
+- 🎨 **Color Feedback**:
+  - 🟢 **Green**: Letter is in the word and in the correct position
+  - 🟡 **Yellow**: Letter is in the word but in the wrong position
+  - ⚫ **Gray**: Letter is not in the word
+- ⌨️ **Keyboard Support**: Use your physical keyboard or on-screen keyboard
+- 📱 **Responsive Design**: Works on desktop, tablet, and mobile devices
+- 🎭 **Trini Culture**: Experience authentic Trinidadian expressions and slang
+- 💬 **Trini Dialect**: Help text and messages use real Trini language
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm or pnpm (recommended: pnpm)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd triniwordle-game
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-### `npm run eject`
+3. Start the development server:
+```bash
+pnpm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Building for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+pnpm build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This creates an optimized production build in the `build` folder.
 
-## Learn More
+## 🎯 How to Play
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Guess the Word**: Try to guess the 5-letter Trini word in 6 tries
+2. **Enter Your Guess**: Type a 5-letter word and press Enter
+3. **Check the Colors**: 
+   - Green tiles = correct letter in correct position
+   - Yellow tiles = correct letter in wrong position
+   - Gray tiles = letter not in the word
+4. **Use the Keyboard**: Click the on-screen keyboard or use your physical keyboard
+5. **Get Help**: Click the help button (❓) to see instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tech Stack
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **CSS Modules** - Scoped styling
+- **Lucide React** - Icons
+- **an-array-of-english-words** - Comprehensive word dictionary
+
+## 📝 License
+
+This project is private and not licensed for public use.
+
+## 🙏 Acknowledgments
+
+- Inspired by the original [Wordle](https://www.nytimes.com/games/wordle/index.html) game
+- Trinidad and Tobago culture and language
+- The Trini community for keeping the language alive!

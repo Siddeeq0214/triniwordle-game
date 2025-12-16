@@ -20,7 +20,7 @@ export const Header: FC<HeaderProps> = ({ onHelp }) => {
 
         <div className={styles.titleGroup}>
           <h1 className={styles.title}>TRINI WORDLE</h1>
-          <p className={styles.subtitle}>Come play ah lil game nah! 🎭</p>
+          <p className={styles.subtitle}>Come play ah lil game nah!</p>
         </div>
 
         {/* <button
