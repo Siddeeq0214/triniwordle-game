@@ -1,15 +1,16 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { Header } from "../Header";
 import { Grid } from "../Grid";
 import { Keyboard } from "../Keyboard";
 import { Message } from "../Message";
-import {HelpModal} from "../Modal";
+import {HelpModal, GameOverModal} from "../Modal";
 import { useWordle } from "../../hooks/useWordle";
 import { useKeyboard } from "../../hooks/useKeyboard";
 import styles from "./GameBoard.module.css";
 
 export const GameBoard: FC = () => {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
+  const [showGameOver, setShowGameOver] = useState(false);
   const {
     gameState,
     message,
@@ -17,8 +18,22 @@ export const GameBoard: FC = () => {
     submitGuess,
     updateCurrentGuess,
     deleteLastLetter,
+    resetGame,
     letterStates,
   } = useWordle();
+
+  // Show game over modal when game ends
+  useEffect(() => {
+    if (gameState.gameOver) {
+      // Small delay to allow tile animations to complete
+      const timer = setTimeout(() => {
+        setShowGameOver(true);
+      }, 1500);
+      return () => clearTimeout(timer);
+    } else {
+      setShowGameOver(false);
+    }
+  }, [gameState.gameOver]);
 
   const handleKeyPress = (key: string): void => {
     if (key === "ENTER") {
@@ -30,17 +45,35 @@ export const GameBoard: FC = () => {
     }
   };
 
+  const handleNewGame = (): void => {
+    resetGame();
+    setShowGameOver(false);
+  };
+
+  const handleCloseModal = (): void => {
+    setShowGameOver(false);
+  };
+
+
   useKeyboard({
     onEnter: submitGuess,
     onDelete: deleteLastLetter,
     onLetter: updateCurrentGuess,
-    enabled: true,
+    enabled: !gameState.gameOver,
   });
 
   return (
     <div className={styles.gameBoard}>
       <Header onHelp={() => setIsHelpOpen(true)} />
       <HelpModal isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
+      <GameOverModal
+        isOpen={showGameOver}
+        won={gameState.won}
+        word={gameState.targetWord}
+        guesses={gameState.guesses.length}
+        onClose={handleCloseModal}
+        onNewGame={handleNewGame}
+      />
       <Message message={message} />
       <div className={styles.gameContainer}>
         <Grid

@@ -35,7 +35,16 @@ export const TRINI_WORDS = [
   'FADDA',
   'BREDS',
   'BRACE',
-  'ACCRA'
+  'ACCRA',
+  'PADNA',
+  'FLAMZ',
+  'CHOOK',
+  'SOUSE',
+  'BRONG',
+  'QUENK',
+  'DROPS',
+  'TANTY',
+  'OBEAH'
 ];
 
 // You can add more valid 5-letter words here for guesses

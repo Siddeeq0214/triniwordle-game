@@ -31,7 +31,16 @@ export const ANSWER_WORDS: readonly string[] = [
   'FADDA',
   'BREDS',
   'BRACE',
-  'ACCRA'
+  'ACCRA',
+  'PADNA',
+  'FLAMZ',
+  'CHOOK',
+  'SOUSE',
+  'BRONG',
+  'QUENK',
+  'DROPS',
+  'TANTY',
+  'OBEAH'
 ] as const;
 
 export const getRandomWord = (): string => {

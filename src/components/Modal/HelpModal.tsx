@@ -15,7 +15,7 @@ export const HelpModal: FC<HelpModalProps> = ({ isOpen, onClose }) => {
         <h2 className={styles.title}>How to Play Trini Wordle</h2>
         <div className={styles.helpContent}>
           <p className={styles.instruction}>
-            Guess de <strong>TRINI WORD</strong> in 6 tries nah!
+            Guess the <strong>TRINI WORD</strong> in 6 tries!
           </p>
           <p className={styles.instruction}>
             Each guess must be a valid 5-letter word. Press de enter button to submit yuh guess.
